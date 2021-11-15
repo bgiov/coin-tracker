@@ -1,4 +1,4 @@
-import { PriceObject, USD } from "../types/app.types";
+import { PriceObject, USD } from "../types/type";
 
 export function calculateTotalAssets(
   coin: string,

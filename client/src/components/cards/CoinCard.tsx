@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useTheme } from "@mui/material/styles";
 import { calculateTotalAssets } from "../../functions/calculateTotalAssets";
-
 export default ({ pending }: { pending: boolean }) => {
   const theme = useTheme();
 
@@ -17,5 +16,9 @@ export default ({ pending }: { pending: boolean }) => {
   //   );
   // }, []);
 
-  return <h1>${assetTotal}</h1>;
+  return (
+    <>
+      <h1>${assetTotal}</h1>
+    </>
+  );
 };

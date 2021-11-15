@@ -24,3 +24,31 @@ export enum TypographyVariants {
   caption = "caption",
   subtitle = "subtitle",
 }
+
+export enum FeatureStrings {
+  portfolio = "View your market value, investment",
+  graphs = "View your market value, investment",
+  software = "View your market value, investment",
+}
+
+export enum HomeCoinNames {
+  ADA = "ADA",
+  BCHA = "BCHA",
+  BNB = "BNB",
+  BTC = "BTC",
+  BUSD = "BUSD",
+  CHZ = "CHZ",
+  DOGE = "DOGE",
+  DOT = "DOT",
+  ETC = "ETC",
+  ETH = "ETH",
+  FIL = "FIL",
+  LINK = "LINK",
+  LTC = "LTC",
+  MATIC = "MATIC",
+  XRP = "XRP",
+  SOL = "SOL",
+  UNI = "UNI",
+  USDC = "USDC",
+  USDT = "USDT",
+}

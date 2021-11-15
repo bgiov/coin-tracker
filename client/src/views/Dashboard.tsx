@@ -1,37 +1,15 @@
 import * as React from "react";
 import { Deposits } from "./Deposits";
-import { Balance } from "./Balance";
 import { createLatestPriceResource } from "../queries/fetchLatestPrices";
-import { PriceObject } from "../types/app.types";
 import { Grid, Paper } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import { Portfolio } from "./Portfolio";
 import { TopCoin } from "./TopCoins";
-
+import { shadows } from "../styles/shadows/shadow";
+//className={shadow.multicolor}
 export const Dashboard = () => {
-  const [latestPriceResource, setLatestPriceResource] = React.useState<any>();
-  // @ts-ignore
-  const [isPending, startTransition] = React.useTransition(500);
-
-  React.useEffect(() => {
-    const tid = setTimeout(() => {
-      startTransition(() => {
-        setLatestPriceResource(createLatestPriceResource());
-      });
-    }, 100);
-
-    return () => clearTimeout(tid);
-  }, [startTransition]);
-
-  const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: "center",
-
-    color: theme.palette.text.secondary,
-    borderRadius: 12,
-  }));
+  const shadow = shadows();
 
   return (
     <React.Suspense fallback={<b>Loading...</b>}>
@@ -41,9 +19,10 @@ export const Dashboard = () => {
             <div style={{ textAlign: "center" }}>
               <h1>Portfolio</h1>
             </div>
+
             <Paper
-              elevation={5}
-              style={{ textAlign: "center", padding: 10, borderRadius: 20 }}
+              elevation={24}
+              style={{ padding: 10, textAlign: "center", borderRadius: "12px" }}
             >
               <Portfolio />
             </Paper>
@@ -77,11 +56,24 @@ export const Dashboard = () => {
                 alignItems: "stretch",
               }}
             >
-              <Deposits />
+              nothing yet
             </Paper>
           </Grid>
-          <Grid item xs={8}>
-            <Item>xs=8</Item>
+          <Grid item xs={6}>
+            <div style={{ textAlign: "center" }}>
+              <h1>Transactions</h1>
+            </div>
+            <Paper
+              elevation={5}
+              style={{
+                textAlign: "center",
+                padding: 10,
+                borderRadius: 20,
+                alignItems: "stretch",
+              }}
+            >
+              <Deposits />
+            </Paper>
           </Grid>
         </Grid>
       </Box>

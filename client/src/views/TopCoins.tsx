@@ -13,7 +13,7 @@ export const TopCoin = () => {
   React.useEffect(() => {
     const tid = setTimeout(() => {
       startTransition(() => {
-        setBalanceResource(createBalanceResource());
+        //setBalanceResource(createBalanceResource());
       });
     }, 100);
     return () => clearTimeout(tid);

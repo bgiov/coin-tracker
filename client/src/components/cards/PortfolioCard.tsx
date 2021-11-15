@@ -10,19 +10,16 @@ import Typography from "@mui/material/Typography";
 import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
-import { PriceObject, USD } from "../../types/app.types";
+import { PriceObject, USD } from "../../types/type";
 
 export default ({ resource, pending }: { resource: any; pending: boolean }) => {
   const theme = useTheme();
 
- 
   const prices = resource.read();
 
   const getPricePerCoin = (x: USD) => {
     return Object.values(x).map((x: USD) => x.price);
   };
-
-  
 
   return (
     <Grid container spacing={2}>

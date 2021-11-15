@@ -34,6 +34,7 @@ export const Balance = () => {
     const totalFiatArray = data.map((coin: any) =>
       calculateTotalAssets(coin[0], coin[1], prices, priceArray)
     );
+
     let total = totalFiatArray[totalFiatArray.length - 1];
 
     return (

@@ -1,5 +1,5 @@
 import Icon from "react-crypto-icons";
-
+import { CoinImage } from "../../functions/dynamicImport";
 export default ({ resource }: { resource: any }) => {
   const { balance } = resource.read();
 
@@ -9,7 +9,8 @@ export default ({ resource }: { resource: any }) => {
     <>
       {data.map((i) => (
         <>
-          <Icon name={i[0]} size={60} />
+          <CoinImage name={i[0]} size={["50px", "50px"]} />
+          {/* <Icon name={i[0]} size={60} /> */}
         </>
       ))}
     </>
