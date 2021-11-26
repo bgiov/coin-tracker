@@ -21,9 +21,5 @@ export const Deposits = () => {
     return () => clearTimeout(tid);
   }, []);
 
-  return (
-    <React.Suspense fallback={<CircularProgress />}>
-      <SimpleTable resource={depositResource} pending={isPending} />
-    </React.Suspense>
-  );
+  return <SimpleTable resource={depositResource} pending={isPending} />;
 };

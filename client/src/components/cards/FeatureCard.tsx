@@ -13,12 +13,14 @@ export const FeatureCard = ({
   subColor,
   subtitle,
   subSize,
+  onHover,
 }: {
   image: string;
   title: string;
   subtitle: string;
   subColor?: string;
   subSize?: string;
+  onHover?: boolean;
 }) => {
   return (
     <Card
@@ -30,6 +32,7 @@ export const FeatureCard = ({
 
         textAlign: "center",
         borderRadius: "8px",
+
         "&:hover": {
           boxShadow: "-1px 10px 29px 0px rgba(227,105,125,0.8)",
         },

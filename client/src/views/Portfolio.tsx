@@ -4,7 +4,7 @@ import { createBalanceResource } from "../queries/fetchBalance";
 import { createLatestPriceResource } from "../queries/fetchLatestPrices";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { bindActionCreators } from "redux";
-import StyledComponents from "../styles/buttons/EnterAppButton";
+import StyledComponents from "../components/buttons/EnterAppButton";
 import { actionCreators, State } from "../state";
 import { BalanceState, IBalance } from "../types/type";
 import { BarGraph } from "../components/charts/BarGraph";

@@ -12,7 +12,7 @@ import portfolioIMG from "../assets/images/home-images/Other 13.svg";
 import graphIMG from "../assets/images/home-images/Other 07.svg";
 import softwareIMG from "../assets/images/home-images/Other 01.svg";
 import { HomeNavBar } from "../navigation/HomeNavBar";
-import EnterAppButton from "../styles/buttons/EnterAppButton";
+import EnterAppButton from "../components/buttons/EnterAppButton";
 import { styled } from "@mui/material/styles";
 import giftColor from "../assets/images/home-images/gift.png";
 import { FeatureCard } from "../components/cards/FeatureCard";
@@ -215,10 +215,8 @@ export const Home = () => {
       <HomeNavBar />
       <Hero />
       <Features />
-
       <Timeline />
       <Integrations />
-
       <SecurityCard />
     </div>
   );

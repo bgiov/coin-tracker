@@ -1,5 +1,6 @@
 import { styled } from "@mui/styles";
 import Button from "@mui/material/Button";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const MyButton = styled(Button)({
   background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
@@ -11,5 +12,11 @@ const MyButton = styled(Button)({
 });
 
 export default function EnterAppButton({ text }: { text: string | number }) {
-  return <MyButton fullWidth>{text}</MyButton>;
+  const { loginWithRedirect } = useAuth0();
+
+  return (
+    <MyButton onClick={() => loginWithRedirect()} fullWidth>
+      {text}
+    </MyButton>
+  );
 }

@@ -23,11 +23,16 @@ export default ({ resource, pending }: { resource: any; pending: boolean }) => {
   if (resource === undefined) return null;
   const { deposits } = resource.read();
   let priceArray: number[] = [];
+
   const getTotalAmountDeposited = () => {
+    console.log(deposits);
     Object.values(deposits).map((x: any) => priceArray.push(x.amount));
+
     const reducer = (previousValue: number, currentValue: number) =>
       previousValue + currentValue;
+
     const totalPrice = priceArray.reduce(reducer, priceArray.length - 1);
+
     return totalPrice;
   };
 

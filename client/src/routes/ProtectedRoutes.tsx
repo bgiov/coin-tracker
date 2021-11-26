@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Switch } from "react-router-dom";
 import { MiniDrawer } from "../navigation/MiniDrawer";
 import { Dashboard } from "../views/Dashboard";
