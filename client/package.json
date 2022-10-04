@@ -6,7 +6,7 @@
     "@auth0/auth0-react": "^1.8.0",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
-    "@mui/icons-material": "^5.0.5",
+    "@mui/icons-material": "^5.10.3",
     "@mui/lab": "^5.0.0-alpha.54",
     "@mui/material": "^5.0.6",
     "@mui/styles": "^5.0.2",
