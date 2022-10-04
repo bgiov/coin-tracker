@@ -9,7 +9,7 @@
     "@mui/icons-material": "^5.0.5",
     "@mui/lab": "^5.0.0-alpha.54",
     "@mui/material": "^5.0.6",
-    "@mui/styles": "^5.0.2",
+    "@mui/styles": "^5.10.3",
     "@react-three/fiber": "^7.0.19",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
